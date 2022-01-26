@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.shortcuts import render
+from post.views import MyFormView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", lambda request: render(request, "home.html"), name="home"),
+    path("", MyFormView.as_view(), name="home"),
 ]

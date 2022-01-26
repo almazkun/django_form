@@ -1,0 +1,6 @@
+{% if form %}
+    <form method="POST">{% csrf_token %}
+        {{ form.as_table }}
+        <button type="submit">Submit</button>
+    </form>
+{% endif %}
